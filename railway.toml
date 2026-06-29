@@ -1,0 +1,17 @@
+# ============================================================
+# Railway Configuration — Megan Bot
+# ============================================================
+# Deploy command: railway up
+# Service type: GitHub repo → Railway auto-detects Python
+# ============================================================
+
+[deploy]
+# أمر تشغيل البوت
+startCommand = "python megan-bot.py"
+# إعادة التشغيل عند فشل
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[healthcheck]
+# لا حاجة لـ healthcheck (البوت Discord bot ما يحتاج HTTP)
+enabled = false
